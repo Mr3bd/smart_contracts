@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MaterialManagement {
+    struct Material {
+        string name;
+        uint256 quantity;
+    }
+
+    mapping(uint256 => Material) public materials;
+    uint256 public materialCount;
+
+    event MaterialAdded(uint256 indexed id, string name, uint256 quantity);
+
+    function addMaterial(string memory _name, uint256 _quantity) external {
+        materialCount++;
+        materials[materialCount] = Material(_name, _quantity);
+        emit MaterialAdded(materialCount, _name, _quantity);
+    }
+}

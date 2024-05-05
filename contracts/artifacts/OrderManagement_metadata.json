@@ -1,0 +1,221 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_productContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "status",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_status",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_cost",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_ownerUser",
+						"type": "address"
+					}
+				],
+				"name": "addOrder",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newStatus",
+						"type": "uint256"
+					}
+				],
+				"name": "changeOrderStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "orderCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "status",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cost",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "productContract",
+				"outputs": [
+					{
+						"internalType": "contract ProductManagementInterface",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/OrderManagement.sol": "OrderManagement"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Material_Managment.sol": {
+			"keccak256": "0x56ee46babf73142318ad1009178b2bf95829950fa401d3ba776ee57e61c81eda",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a321a68f465105eb6b802301b76905f2038c6b2cae2f53a8e7738d91796331a2",
+				"dweb:/ipfs/QmWWWjz4XkMCeYYmTesoYEXdeGpKgcY3YPnCw55ZZY9WGQ"
+			]
+		},
+		"contracts/OrderManagement.sol": {
+			"keccak256": "0xbf09659333393633b1a6d7afd22a0779b5e015dcddb728515f580e4f9da07dff",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://127c8bfadbb9bfdc29cb8a1b7d289fe2a603852fbd742e87910cf8fc23bfdc50",
+				"dweb:/ipfs/QmXPSyLkN69BauJFkwWBufDYhggzMKJ641LftvHhoLxdSU"
+			]
+		},
+		"contracts/ProductManagement.sol": {
+			"keccak256": "0xa8b01378fb3317cbb6ec8949db23b2eb900d1212326307a7604c10254ae8a36b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ee9180fc226d754d1c1e3b5596e86b123f6a515dd219e3ff53a73a2ebee04e5d",
+				"dweb:/ipfs/QmdfZBgTXkygYYEFYg5yqxy6SvsWdVRmdx3MPAjgrpYBKw"
+			]
+		}
+	},
+	"version": 1
+}

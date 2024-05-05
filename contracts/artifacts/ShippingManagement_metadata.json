@@ -1,0 +1,375 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_orderContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "reqId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "RewardTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "reqId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "status",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "lgUser",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "country",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "city",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "street",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "zipcode",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "building",
+						"type": "uint256"
+					}
+				],
+				"name": "ShippingRequestAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "reqId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "status",
+						"type": "uint256"
+					}
+				],
+				"name": "ShippingRequestStatusChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_lgUser",
+						"type": "address"
+					}
+				],
+				"name": "acceptShippingRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_country",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_city",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_street",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_zipcode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_building",
+						"type": "uint256"
+					}
+				],
+				"name": "addShippingRequest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelshippingRequest",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "completeShippingRequest",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "orderContract",
+				"outputs": [
+					{
+						"internalType": "contract OrderManagementInterface",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "shippingRequests",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "status",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "lgUser",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "country",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "city",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "streen",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "zipcode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "building",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ShippingManagement.sol": "ShippingManagement"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Material_Managment.sol": {
+			"keccak256": "0x56ee46babf73142318ad1009178b2bf95829950fa401d3ba776ee57e61c81eda",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a321a68f465105eb6b802301b76905f2038c6b2cae2f53a8e7738d91796331a2",
+				"dweb:/ipfs/QmWWWjz4XkMCeYYmTesoYEXdeGpKgcY3YPnCw55ZZY9WGQ"
+			]
+		},
+		"contracts/OrderManagement.sol": {
+			"keccak256": "0xbf09659333393633b1a6d7afd22a0779b5e015dcddb728515f580e4f9da07dff",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://127c8bfadbb9bfdc29cb8a1b7d289fe2a603852fbd742e87910cf8fc23bfdc50",
+				"dweb:/ipfs/QmXPSyLkN69BauJFkwWBufDYhggzMKJ641LftvHhoLxdSU"
+			]
+		},
+		"contracts/ProductManagement.sol": {
+			"keccak256": "0x49ac47b774bb4b83d11f82835d1cc6d4f88211d98e5db54e93a1d3522777671a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0bb7712fbd073a5f67794f620de906e4af4cdf0c13000ea8a8cdd44b7aa6ebfc",
+				"dweb:/ipfs/QmbZW18F2vkX1x8YLgDbqMjagr5k8cQFQqguaqT7o5Q25m"
+			]
+		},
+		"contracts/ShippingManagement.sol": {
+			"keccak256": "0x83b3c1ae4368bc785a0a5387ae092b42ce2840258f2dcd3b3507c29e0f867895",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3435f0b9ded8a1700a5928446b9c08e42b0086b772d9f8f0050dc8845c2827cb",
+				"dweb:/ipfs/QmV177FvehcxJhfQBx7sxoEgetSmmG93h1GztbHsEbxnXr"
+			]
+		}
+	},
+	"version": 1
+}

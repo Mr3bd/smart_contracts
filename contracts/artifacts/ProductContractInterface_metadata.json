@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "key",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newValue",
+						"type": "uint256"
+					}
+				],
+				"name": "updateProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/QaManagement.sol": "ProductContractInterface"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Material_Managment.sol": {
+			"keccak256": "0x56ee46babf73142318ad1009178b2bf95829950fa401d3ba776ee57e61c81eda",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a321a68f465105eb6b802301b76905f2038c6b2cae2f53a8e7738d91796331a2",
+				"dweb:/ipfs/QmWWWjz4XkMCeYYmTesoYEXdeGpKgcY3YPnCw55ZZY9WGQ"
+			]
+		},
+		"contracts/ProductManagement.sol": {
+			"keccak256": "0xc93b944913e3b39c3a8a279e398dd0cf36238f2b67c28f2cfced0811fc22231b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dac7120529b9d06ee8ec6d3f41baf088fe05578ca7c65de39d00d9edf5058b84",
+				"dweb:/ipfs/QmdxBNp53Bev21HX5YUawLAna9g4d9Lp4fhUjs4kXAtEy8"
+			]
+		},
+		"contracts/QaManagement.sol": {
+			"keccak256": "0x1b8f3dbfacbec596d83ce532c7564403476afee1263e63606995ce4556658f74",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e68941224ea1e25b14966ea911c317f0ae3101f4dd6deb67374aab1e721bcc7",
+				"dweb:/ipfs/QmP7dueBqQPVR9V3WpLSCwvzimhDqjCHbLRBrhMieTzXYm"
+			]
+		}
+	},
+	"version": 1
+}
