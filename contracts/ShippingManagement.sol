@@ -14,11 +14,11 @@ contract ShippingManagement {
         uint256 status; // 1: Pending, 2: In Progress, 3: Completed, 4: Canceled
         address lgUser;
         uint256 reward;
-        uint256 country;
-        uint256 city;
-        uint256 streen;
-        uint256 zipcode;
-        uint256 building;
+        string country;
+        string city;
+        string streen;
+        string zipcode;
+        string building;
     }
 
     mapping(uint256 => ShippingRequest) public shippingRequests;
@@ -26,7 +26,7 @@ contract ShippingManagement {
 
     OrderManagementInterface public orderContract;
     
-    event ShippingRequestAdded(uint256 indexed reqId, uint256 orderId, uint256 status, address lgUser, uint256 reward, uint256 country, uint256 city, uint256 street, uint256 zipcode, uint256 building);
+    event ShippingRequestAdded(uint256 indexed reqId, uint256 orderId, uint256 status, address lgUser, uint256 reward, string country, string city, string street, string zipcode, string building);
     event ShippingRequestStatusChanged(uint256 indexed reqId, uint256 status);
     event RewardTransferred(uint256 indexed reqId, address indexed receiver, uint256 amount);
 
@@ -35,7 +35,7 @@ contract ShippingManagement {
     }
 
 
-    function addShippingRequest(uint256 _orderId, uint256 _reward, uint256 _country, uint256 _city, uint256 _street, uint256 _zipcode, uint256 _building) external payable returns (uint256) {
+    function addShippingRequest(uint256 _orderId, uint256 _reward, string memory _country, string memory _city, string memory _street, string memory _zipcode, string memory _building) external payable returns (uint256) {
         require(msg.value == _reward, "Incorrect reward amount sent");
         requestCount++;
         shippingRequests[requestCount] = ShippingRequest(requestCount, _orderId, 1, address(0), _reward, _country, _city, _street, _zipcode, _building);

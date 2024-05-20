@@ -5,7 +5,6 @@ import "./ProductManagement.sol";
 
 interface ProductManagementInterface {
     function changeProductStatus(uint256 productId, uint256 newStatus) external;
-    function getProductQuantity(uint256 _productId) external view returns (uint256);
 }
 contract OrderManagement {
 
@@ -30,13 +29,15 @@ contract OrderManagement {
     }
 
 
-    function addOrder(uint256 _productId, uint256 _quantity, uint256 _status, uint256 _cost, address _ownerUser) external payable returns (uint256) {
-       uint256 x = productContract.getProductQuantity(_productId);
-
-       bool enough = x - _quantity >= 0;
+    function addOrder(uint256 _productId, uint256 _quantity, uint256 _status, uint256 _cost, address _ownerUser, uint256 _pq) external payable returns (uint256) {
+       uint256 diff = _pq - _quantity;
+       bool enough = diff >= 0;
 
        require(enough,"Error, no enough quantity");
        
+       if(diff == 0){
+        productContract.changeProductStatus(_productId, 2);
+       }
        orderCount++;
 
        payable(_ownerUser).transfer(_cost);

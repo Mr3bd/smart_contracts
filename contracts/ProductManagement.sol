@@ -35,8 +35,7 @@ contract ProductManagement {
             materialContract.setQuantity(_matIds[i], _qts[i]);
             payable(_ownerIds[i]).transfer(_costs[i]);
         }
-
-
+    
         emit ProductAdded(productCount, _name, _quantity, _price, _status);
 
         return productCount; // Return the newly created product ID
@@ -51,8 +50,8 @@ contract ProductManagement {
         products[_productId].quantity -= _qts;
     }
 
-    function getProductQuantity(uint256 _productId) view  external  returns (uint256) {
-        return products[_productId].quantity;
-    }
+    // function getProductQuantity(uint256 _productId) view  external  returns (uint256) {
+    //     return products[_productId].quantity;
+    // }
 
 }
